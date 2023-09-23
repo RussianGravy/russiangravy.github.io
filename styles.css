@@ -50,6 +50,7 @@ p {
     color: white;
     position: relative;
     top: 33%;
+    opacity: 0;
 }
 div {
     width: 260px;
