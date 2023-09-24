@@ -5,6 +5,7 @@ function SiteObject(id){
     console.log(id + " online");
     //instance variables
     this.element = document.getElementById(id);
+    this.lastScreenSize = window.innerWidth;
     this.width = 0;
     this.height = 0;
     this.x = 0;
@@ -14,20 +15,24 @@ function SiteObject(id){
     this.done;
     //methods
     this.update = function(){
-        console.log("position: " + this.x + ", " + this.y);
-        console.log("velocity: " + this.velocity.getxComp() + ", " + this.velocity.getyComp());
-        console.log("acceleration: " + this.acceleration.getxComp() + ", " + this.acceleration.getyComp());
+        console.log(window.innerWidth + "/" + this.lastScreenSize+ " = " + window.innerWidth/this.lastScreenSize);
         //updating element
         this.element.style.left = this.x + "px";
         this.element.style.top = this.y + "px";
         //applying velocity and acceleration
         this.x += this.velocity.getxComp();
         this.y += this.velocity.getyComp();
+        this.x *= (window.innerWidth/this.lastScreenSize);
+        this.y *= (window.innerWidth/this.lastScreenSize);
+        this.width *= (window.innerWidth/this.lastScreenSize);
+        this.height *= (window.innerWidth/this.lastScreenSize);
+        this.setSize(this.width, this.height);
         //stopping when velocity is 0
         if(this.velocity.getMagnitude() > 0.09){
             this.velocity.add(this.acceleration);}
         else{
             this.velocity.zero();}
+        this.lastScreenSize = window.innerWidth;
     };
     this.setPosition = function(x, y){
         this.x = x;
@@ -38,7 +43,7 @@ function SiteObject(id){
         this.velocity = new Vector2(x, y);
     };
     this.setAcceleration = function(){
-        this.acceleration = new Vector2(-1*this.velocity.getxComp()/20, -1*this.velocity.getyComp()/20);
+        this.acceleration = new Vector2(-1*this.velocity.getxComp()/80, -1*this.velocity.getyComp()/80);
         // TIME = 40;
         // xRatio = Math.abs( this.velocity.getxComp() / this.velocity.getMagnitude() );
         // yRatio = Math.abs( this.velocity.getyComp() / this.velocity.getMagnitude() );
@@ -52,15 +57,6 @@ function SiteObject(id){
         this.element.style.width = this.width + "px";
         this.element.style.height = this.height + "px";
     }
-
-    window.addEventListener('resize', function(){
-        console.log("RESIZED * * * * * * * *");
-        this.x = window.innerWidth/2-this.height/2;
-        this.y = window.innerHeight/2-this.width/2;
-        //this.width = 335*window.innerWidth/1440; 
-        //this.height = 335*window.innerWidth/1440;
-        his.setSize(335*window.innerWidth/1440, 335*window.innerWidth/1440);
-    });
 }
 
 function Vector2(x, y){
