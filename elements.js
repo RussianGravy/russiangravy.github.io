@@ -18,9 +18,6 @@ function SiteObject(id){
         console.log("velocity: " + this.velocity.getxComp() + ", " + this.velocity.getyComp());
         console.log("acceleration: " + this.acceleration.getxComp() + ", " + this.acceleration.getyComp());
         //updating element
-            this.x = window.innerWidth/2-this.height/2;
-            this.y = window.innerHeight/2-this.width/2;
-            this.setSize(335*window.innerWidth/1440, 335*window.innerWidth/1440);
         this.element.style.left = this.x + "px";
         this.element.style.top = this.y + "px";
         //applying velocity and acceleration
@@ -55,6 +52,15 @@ function SiteObject(id){
         this.element.style.width = this.width + "px";
         this.element.style.height = this.height + "px";
     }
+
+    window.addEventListener('resize', function(){
+        console.log("RESIZED * * * * * * * *");
+        this.x = window.innerWidth/2-this.height/2;
+        this.y = window.innerHeight/2-this.width/2;
+        //this.width = 335*window.innerWidth/1440; 
+        //this.height = 335*window.innerWidth/1440;
+        his.setSize(335*window.innerWidth/1440, 335*window.innerWidth/1440);
+    });
 }
 
 function Vector2(x, y){
