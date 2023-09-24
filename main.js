@@ -1,18 +1,17 @@
 var pgrBubble = new SiteObject("programmer");
-    //pgrBubble.setSize(260, 260);
-    //pgrBubble.setPosition(570, 210);
+    pgrBubble.setSize(260, 260);
+    pgrBubble.setPosition(570, 210);
 var illBubble = new SiteObject("illustrator");
-    //illBubble.setSize(260, 260);
-    //illBubble.setPosition(570, 210);
+    illBubble.setSize(260, 260);
+    illBubble.setPosition(570, 210);
 var nameBubble = new SiteObject("title");
-    //nameBubble.setSize(335, 335);
-    //nameBubble.setPosition(532.5, 172.5);
+    nameBubble.setSize(335, 335);
+    nameBubble.setPosition(532.5, 172.5);
 
 var gameFrame = 0;
 function animate() {
     gameFrame++;
     if(gameFrame%2 == 0){
-        console.log(window.innerWidth);
         nameBubble.update();
         pgrBubble.update();
         illBubble.update();
