@@ -1,9 +1,13 @@
 var pgrBubble = new SiteObject("programmer");
     pgrBubble.setSize(260, 260);
     pgrBubble.setPosition(570, 210);
+    pgrBubble.setVelocity(-8, 0);
+    pgrBubble.setAcceleration();
 var illBubble = new SiteObject("illustrator");
     illBubble.setSize(260, 260);
     illBubble.setPosition(570, 210);
+    illBubble.setVelocity(8, 0);
+    illBubble.setAcceleration();
 var nameBubble = new SiteObject("title");
     nameBubble.setSize(335, 335);
     nameBubble.setPosition(532.5, 172.5);
@@ -52,7 +56,6 @@ function updateBackground(){
     tempY -= 0.5;
     if(tempY <= -1*canvas.height){tempY = 0;}
     if(bgY == canvas.height){bgY = 0;}
-    console.log(opacity);
     if(opacity < 0.97){
         opacity += 0.008;
         canvas.style.opacity = "" + opacity;
