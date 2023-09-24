@@ -45,6 +45,10 @@ var temp = new Image();
     var tempY = 0;
 
 function updateBackground(){
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    ctx.width = window.innerWidth; 
+    ctx.height = window.innerHeight;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     //background
     ctx.drawImage(temp, 0, tempY, canvas.width, canvas.height);
