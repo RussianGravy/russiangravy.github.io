@@ -1,16 +1,16 @@
 var pgrBubble = new SiteObject("programmer");
-    pgrBubble.setSize(260, 260);
-    pgrBubble.setPosition(570, 210);
-    pgrBubble.setVelocity(-8, 0);
+    pgrBubble.setSize(260*window.innerWidth/1440, 260*window.innerWidth/1440);
+    pgrBubble.setPosition(570*window.innerWidth/1440, 210*window.innerWidth/1440);
+    pgrBubble.setVelocity(-8*window.innerWidth/1440, 0);
     pgrBubble.setAcceleration();
 var illBubble = new SiteObject("illustrator");
-    illBubble.setSize(260, 260);
-    illBubble.setPosition(570, 210);
-    illBubble.setVelocity(8, 0);
+    illBubble.setSize(260*window.innerWidth/1440, 260*window.innerWidth/1440);
+    illBubble.setPosition(570*window.innerWidth/1440, 210*window.innerWidth/1440);
+    illBubble.setVelocity(8*window.innerWidth/1440, 0);
     illBubble.setAcceleration();
 var nameBubble = new SiteObject("title");
-    nameBubble.setSize(335, 335);
-    nameBubble.setPosition(532.5, 172.5);
+    nameBubble.setSize(335*window.innerWidth/1440, 335*window.innerWidth/1440);
+    nameBubble.setPosition(532.5*window.innerWidth/1440, 172.5*window.innerWidth/1440);
 
 var gameFrame = 0;
 function animate() {
@@ -30,6 +30,7 @@ animate();
 var canvas = document.getElementById("background");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    var ctx = canvas.getContext("2d");
     ctx.width = window.innerWidth; 
     ctx.height = window.innerHeight;
 var background = new Image();
@@ -44,10 +45,10 @@ var temp = new Image();
     var tempY = 0;
 
 function updateBackground(){
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    ctx.width = window.innerWidth; 
-    ctx.height = window.innerHeight;
+    // canvas.width = window.innerWidth;
+    // canvas.height = window.innerHeight;
+    // ctx.width = window.innerWidth; 
+    // ctx.height = window.innerHeight;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     //background
     ctx.drawImage(temp, 0, tempY, canvas.width, canvas.height);
