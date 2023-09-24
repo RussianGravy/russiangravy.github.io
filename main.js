@@ -30,7 +30,6 @@ animate();
 var canvas = document.getElementById("background");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    var ctx = canvas.getContext("2d");
     ctx.width = window.innerWidth; 
     ctx.height = window.innerHeight;
 var background = new Image();
