@@ -26,12 +26,6 @@ function SiteObject(id){
         this.y *= (window.innerWidth/this.lastScreenSize);
         this.width *= (window.innerWidth/this.lastScreenSize);
         this.height *= (window.innerWidth/this.lastScreenSize);
-            this.element.style.borderradius = 200*(window.innerWidth/this.lastScreenSize) + "px";
-        this.setSize(this.width, this.height);
-            // var elems = document.getElementsByTagName("p");
-            // for (var i = 0;i < elems.length; i++){
-            //     elems[i].style.fontsize = 30*(window.innerWidth/this.lastScreenSize) + "px";
-            // }
         //stopping when velocity is 0
         if(this.velocity.getMagnitude() > 0.09){
             this.velocity.add(this.acceleration);}
