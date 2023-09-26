@@ -1,16 +1,19 @@
+const maxWidth = screen.width;
+console.log(maxWidth);
+
 var pgrBubble = new SiteObject("programmer");
-    pgrBubble.setSize(260*window.innerWidth/1440, 260*window.innerWidth/1440);
-    pgrBubble.setPosition(570*window.innerWidth/1440, 210*window.innerWidth/1440);
-    pgrBubble.setVelocity(-8*window.innerWidth/1440, 0);
+    pgrBubble.setSize(260*window.innerWidth/maxWidth, 260*window.innerWidth/maxWidth);
+    pgrBubble.setPosition(570*window.innerWidth/maxWidth, 210*window.innerWidth/maxWidth);
+    pgrBubble.setVelocity(-8*window.innerWidth/maxWidth, 0);
     pgrBubble.setAcceleration();
 var illBubble = new SiteObject("illustrator");
-    illBubble.setSize(260*window.innerWidth/1440, 260*window.innerWidth/1440);
-    illBubble.setPosition(570*window.innerWidth/1440, 210*window.innerWidth/1440);
-    illBubble.setVelocity(8*window.innerWidth/1440, 0);
+    illBubble.setSize(260*window.innerWidth/maxWidth, 260*window.innerWidth/maxWidth);
+    illBubble.setPosition(570*window.innerWidth/maxWidth, 210*window.innerWidth/maxWidth);
+    illBubble.setVelocity(8*window.innerWidth/maxWidth, 0);
     illBubble.setAcceleration();
 var nameBubble = new SiteObject("title");
-    nameBubble.setSize(335*window.innerWidth/1440, 335*window.innerWidth/1440);
-    nameBubble.setPosition(532.5*window.innerWidth/1440, 172.5*window.innerWidth/1440);
+    nameBubble.setSize(335*window.innerWidth/maxWidth, 335*window.innerWidth/maxWidth);
+    nameBubble.setPosition(532.5*window.innerWidth/maxWidth, 172.5*window.innerWidth/maxWidth);
 
 var gameFrame = 0;
 function animate() {
