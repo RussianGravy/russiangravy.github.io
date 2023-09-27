@@ -59,15 +59,14 @@ function updateBackground(){
     //foreground
     ctx.drawImage(background, bgX, bgY, canvas.width, canvas.height);
     ctx.drawImage(background, bgX, bgY-canvas.height, canvas.width, canvas.height);
-    bgY += 0.5;
-    tempY -= 0.5;
+    bgY += 0.8;
+    tempY -= 0.8;
     if(tempY <= -1*canvas.height){tempY = 0;}
-    if(bgY == canvas.height){bgY = 0;}
+    if(bgY >= canvas.height){bgY = 0;}
     if(opacity < 0.97){
-        opacity += 0.008;
+        opacity += 0.01;
         canvas.style.opacity = "" + opacity;
     }
-    //if(window.getComputedStyle(canvas).getPropertyValue("opacity") < 1){canvas.style.opacity += 1; console.log("oh my god")}
 }
 
 var opacity = 0;
