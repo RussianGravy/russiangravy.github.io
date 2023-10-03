@@ -32,16 +32,6 @@ body {background-color: black;}
     height: auto;
     position: static;
 }
-#title {
-    width: 335px;
-    height: 335px;
-    left: 532.5px; 
-    top: 172.5px;
-}
-#name {
-    width: 335px;
-    height: 335px;
-}
 p {
     width: 260px;
     height: 260px;
@@ -52,6 +42,19 @@ p {
     top: 33%;
     opacity: 1;
 }
+#title {
+    width: 335px;
+    height: 335px;
+    left: 532.5px; 
+    top: 172.5px;
+}
+#name {
+    width: 335px;
+    height: 335px;
+    opacity:0;
+}
+#illText {opacity:0;}
+#proText {opacity:0;}
 div {
     width: 260px;
     height: 260px;
@@ -62,10 +65,14 @@ div {
     position: absolute;
     left: 570px;
     top: 210px;
-    opacity: 0.87;
+    opacity: 0.84;
     z-index: 5;
 }
 div {background-color: black;}
+div:hover{
+    background-color: red;
+    opacity: 1;
+}
 
 img {
     margin: 0px;

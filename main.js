@@ -15,26 +15,24 @@ var nameBubble = new SiteObject("title");
     nameBubble.setSize(335*window.innerWidth/maxWidth, 335*window.innerWidth/maxWidth);
     nameBubble.setPosition(window.innerWidth*0.5-0.5*nameBubble.width, window.innerHeight*0.5-0.5*nameBubble.height);
 
-// var logo = new SiteObject("logo");
-// var penButton = new SiteObject("penButton");
-// var compButton = new SiteObject("compButton");
+    var logo = new SiteObject("logo");
+        logo.element.onclick = () => {window.open("otherpages/bio.html");}
+    var penButton = new SiteObject("pen");
+        penButton.element.onclick = () => {window.open("otherpages/illustrator.html");}
+    var compButton = new SiteObject("comp");
+        compButton.element.onclick = () => {window.open("otherpages/programmer.html");}
+    
+    function updateImages(){
+        logo.setSize(nameBubble.width, nameBubble.height);
+        penButton.setSize(illBubble.width, illBubble.height);
+        compButton.setSize(pgrBubble.width, pgrBubble.height);
+    }
+    updateImages();
 
-// updateImages(){
-//     logo.setPosition();
-//     penButton.setPosition();
-//     compButton.setPosition();
-// }
-
-/*
-make an array of document elements
-add each document element to the array
-if elements have sub elements
-    add them too
-for(every document element)
-    make a siteobject
-    set the width, set the height
-    multiply the width and height by a ratio of current-width/screen-width
-*/
+    window.onresize = () => {
+        console.log("hi");
+        updateImages();
+    }
 
 var gameFrame = 0;
 function animate() {
@@ -84,7 +82,7 @@ function updateBackground(){
     tempY -= 0.8;
     if(tempY <= -1*canvas.height){tempY = 0;}
     if(bgY >= canvas.height){bgY = 0;}
-    if(opacity < 0.97){
+    if(opacity < 0.98){
         opacity += 0.015;
         canvas.style.opacity = "" + opacity;
     }
