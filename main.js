@@ -2,18 +2,18 @@ const maxWidth = screen.width;
 console.log(maxWidth);
 
 var pgrBubble = new SiteObject("programmer");
-    pgrBubble.setSize(260*window.innerWidth/maxWidth, 260*window.innerWidth/maxWidth);
-    pgrBubble.setPosition(570*window.innerWidth/maxWidth, 210*window.innerWidth/maxWidth);
+    pgrBubble.setSize((260)*window.innerWidth/maxWidth, 260*window.innerWidth/maxWidth);
+    pgrBubble.setPosition(window.innerWidth*0.5-0.5*pgrBubble.width, window.innerHeight*0.5-0.5*pgrBubble.height);
     pgrBubble.setVelocity(-8*window.innerWidth/maxWidth, 0);
     pgrBubble.setAcceleration();
 var illBubble = new SiteObject("illustrator");
     illBubble.setSize(260*window.innerWidth/maxWidth, 260*window.innerWidth/maxWidth);
-    illBubble.setPosition(570*window.innerWidth/maxWidth, 210*window.innerWidth/maxWidth);
+    illBubble.setPosition(window.innerWidth*0.5-0.5*illBubble.width, window.innerHeight*0.5-0.5*illBubble.height);
     illBubble.setVelocity(8*window.innerWidth/maxWidth, 0);
     illBubble.setAcceleration();
 var nameBubble = new SiteObject("title");
     nameBubble.setSize(335*window.innerWidth/maxWidth, 335*window.innerWidth/maxWidth);
-    nameBubble.setPosition(532.5*window.innerWidth/maxWidth, 172.5*window.innerWidth/maxWidth);
+    nameBubble.setPosition(window.innerWidth*0.5-0.5*nameBubble.width, window.innerHeight*0.5-0.5*nameBubble.height);
 
 var gameFrame = 0;
 function animate() {
@@ -64,7 +64,7 @@ function updateBackground(){
     if(tempY <= -1*canvas.height){tempY = 0;}
     if(bgY >= canvas.height){bgY = 0;}
     if(opacity < 0.97){
-        opacity += 0.01;
+        opacity += 0.015;
         canvas.style.opacity = "" + opacity;
     }
 }
