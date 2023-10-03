@@ -15,6 +15,17 @@ var nameBubble = new SiteObject("title");
     nameBubble.setSize(335*window.innerWidth/maxWidth, 335*window.innerWidth/maxWidth);
     nameBubble.setPosition(window.innerWidth*0.5-0.5*nameBubble.width, window.innerHeight*0.5-0.5*nameBubble.height);
 
+/*
+make an array of document elements
+add each document element to the array
+if elements have sub elements
+    add them too
+for(every document element)
+    make a siteobject
+    set the width, set the height
+    multiply the width and height by a ratio of current-width/screen-width
+*/
+
 var gameFrame = 0;
 function animate() {
     gameFrame++;
