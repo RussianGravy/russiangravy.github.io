@@ -15,6 +15,16 @@ var nameBubble = new SiteObject("title");
     nameBubble.setSize(335*window.innerWidth/maxWidth, 335*window.innerWidth/maxWidth);
     nameBubble.setPosition(window.innerWidth*0.5-0.5*nameBubble.width, window.innerHeight*0.5-0.5*nameBubble.height);
 
+// var logo = new SiteObject("logo");
+// var penButton = new SiteObject("penButton");
+// var compButton = new SiteObject("compButton");
+
+// updateImages(){
+//     logo.setPosition();
+//     penButton.setPosition();
+//     compButton.setPosition();
+// }
+
 /*
 make an array of document elements
 add each document element to the array
