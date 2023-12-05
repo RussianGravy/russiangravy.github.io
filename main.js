@@ -56,14 +56,14 @@ var canvas = document.getElementById("background");
     ctx.width = window.innerWidth; 
     ctx.height = window.innerHeight;
 var background = new Image();
-    background.src = "foreground.png";
+    background.src = "images/foreground.png";
     background.width = canvas.width;
     background.height = canvas.height;
     var bgX = 0;
     var bgY = 0;
 
 var temp = new Image();
-    temp.src = "background.png";
+    temp.src = "images/background.png";
     var tempY = 0;
 
 function updateBackground(){
