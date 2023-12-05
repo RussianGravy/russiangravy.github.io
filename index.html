@@ -7,21 +7,96 @@
     </head>
 
     <body>
-        <canvas id="background"></canvas>
         <div id="cover">
-            <p id="services">Valentine Jones-Metsiou,  Computer Programmer  |  Illustrator</p>
+            <p id="services">Valentine Jones-Metsiou,  Front-End Web Developer  &&  Illustrator</p>
         </div>
-        <div id="programmer">
-            <img src="compButton.png" id="comp">
+
+        <div style="height: 50vh; width: 95vw; position: relative; display: flex; margin: auto; padding-top: 5vh;">
+            <canvas id="background"></canvas>
+            <div style="width: fit-content; margin: auto; align-self: center;">
+                <button id="programmer" class="bubbleButton">
+                    <img src="images/compButton.png" id="comp" class="buttonIcon">
+                </button>
+                <button id="title" class="bubbleButton">
+                    <img src="images/logo.png" id="logo" class="buttonIcon">
+                </button>
+                <button id="illustrator" class="bubbleButton">
+                    <img src="images/penButton.png" id="pen" class="buttonIcon">
+                </button>
+            </div>
         </div>
-        </div>
-        <div id="illustrator">
-            <img src="penButton.png" id="pen">
-        </div>
-        <div id="title">
-            <img src="logo.png" id="logo">
-        </div>
-        <link rel="stylesheet" href="styles.css">
+        <!-- <section style ="width:100vw; height: 100%; margin: 0; padding: 1px;">
+            <div style="display: flex; flex-wrap: wrap row; margin: auto; margin-top: 2vh; border-radius: 200px; border-color: white; border-style: solid; border-width: 5px; background-color: black; width: 80vw;">
+                <div style="width: fit-content; height: 100%; margin-left: 10px; margin-top: 10px;">
+                    <img src="images/profile.png" style="width: 200px; height: 200px; border-radius: 200px;">
+                </div>
+                <div style="width: fit-content;">
+                    <h1 style="width: 90%; color: white; margin: auto; margin-top: 10px; margin-bottom: 10px;">
+                        About Me
+                    </h1>
+                    <p style="color: white; width: 90%; height: 100%; margin: auto; line-height: 25px;">
+                        Hello! My name is Valentine Jones. 
+                        I am a Computer Science undergrad at San Francisco State University. 
+                        My area of expertise is in front-end web development. 
+                        My proudest example of my skills is this website! <br> <br>
+                        I am also a skilled cartoonist and I enjoy bringing characters to life
+                        on the page. It's a pleasure to have you read this, and if you are impressed by my work at all, 
+                        please reach out!
+                    </p>
+                </div>
+            </div>
+        </section> -->
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+            }
+            #cover {
+                position: fixed;
+                z-index: 1;
+                background-color: black;
+                color: white;
+                width: 100vw;
+                height: 30px;
+                display: flex;
+            }
+            #services {
+                align-self: center;
+                margin-left: 10px;
+            }
+            #background {
+                width: 100%;
+                height: 100%;
+                position: absolute; /* used to be position: absolute */
+                z-index: -1;
+            }
+            .bubbleButton {
+                background-color: black;
+                opacity: 70%;
+                width: 30vh; /* 18vw */
+                height: 30vh;
+                border-radius: 200px;
+                border-color: white;
+                border-style: solid;
+                border-width: 5px;
+            }
+            .bubbleButton:hover{
+                background-color: red;
+                opacity: 100%;
+                cursor: pointer;
+            }
+            #title {
+                width: 40vh; /* 23vw */
+                height: 40vh;
+                margin-left: 5vw;
+                margin-right: 5vw;
+            }
+            .buttonIcon {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <!-- <link rel="stylesheet" href="styles.css"> -->
         <script src="elements.js"></script>
         <script src="main.js"></script>
     </body>
