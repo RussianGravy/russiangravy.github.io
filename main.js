@@ -47,19 +47,35 @@ function animate() {
 }
 animate();
 
+
 //Messy background code below * * * * * * * * * * * * * * * * * |
+var canvas = document.getElementById("background")
+    var ctx = canvas.getContext("2d");
+
+var background = new Image();
+    background.src = "images/background.png";
+    var bgY = 0;
+
+var foreground = new Image();
+    foreground.src = "images/foreground.png";
+    var fgY = 0;
+
+var scalar = canvas.style.getPropertyValue("width");
+    canvas.addEventListener('resize', () => {
+        scalar = canvas.style.getPropertyValue("width");
+    });
+
+//function updateBackground() {}
 
 var canvas = document.getElementById("background");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    var ctx = canvas.getContext("2d");
-    ctx.width = window.innerWidth; 
+ var ctx = canvas.getContext("2d");
+    ctx.width = window.innerWidth;
     ctx.height = window.innerHeight;
+    
 var background = new Image();
     background.src = "images/foreground.png";
-    background.width = canvas.width;
-    background.height = canvas.height;
-    var bgX = 0;
     var bgY = 0;
 
 var temp = new Image();
@@ -67,17 +83,13 @@ var temp = new Image();
     var tempY = 0;
 
 function updateBackground(){
-    // canvas.width = window.innerWidth;
-    // canvas.height = window.innerHeight;
-    // ctx.width = window.innerWidth; 
-    // ctx.height = window.innerHeight;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     //background
-        ctx.drawImage(temp, 0, tempY, canvas.width, canvas.height);
-        ctx.drawImage(temp, 0, tempY+canvas.height, canvas.width, canvas.height);
+        ctx.drawImage(temp, 0, tempY,  window.innerWidth, window.innerHeight);
+        ctx.drawImage(temp, 0, tempY+window.innerHeight, window.innerWidth, window.innerHeight);
     //foreground
-        ctx.drawImage(background, bgX, bgY, canvas.width, canvas.height);
-        ctx.drawImage(background, bgX, bgY-canvas.height, canvas.width, canvas.height);
+        ctx.drawImage(background, 0, bgY, window.innerWidth, window.innerHeight);
+        ctx.drawImage(background, 0, bgY-canvas.height, window.innerWidth, window.innerHeight);
     bgY += 0.8;
     tempY -= 0.8;
     if(tempY <= -1*canvas.height){tempY = 0;}

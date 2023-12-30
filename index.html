@@ -11,7 +11,7 @@
             <p id="services">Valentine Jones-Metsiou,  Front-End Web Developer  &&  Illustrator</p>
         </div>
 
-        <div style="height: 50vh; width: 95vw; position: relative; display: flex; margin: auto; padding-top: 5vh;">
+        <div style="height: 50vh; width: 100vw; position: relative; display: flex; margin: auto; padding-top: 80px;">
             <canvas id="background"></canvas>
             <div style="width: fit-content; margin: auto; align-self: center;">
                 <button id="programmer" class="bubbleButton">
@@ -51,18 +51,21 @@
                 padding: 0;
                 margin: 0;
             }
+            body {
+                background-color: rgb(50,50,50);
+            }
             #cover {
                 position: fixed;
                 z-index: 1;
-                background-color: black;
+                background-color: #FF4A4A;
                 color: white;
                 width: 100vw;
-                height: 30px;
+                height: 60px;
                 display: flex;
             }
             #services {
                 align-self: center;
-                margin-left: 10px;
+                margin-left: 15px;
             }
             #background {
                 width: 100%;
@@ -72,7 +75,7 @@
             }
             .bubbleButton {
                 background-color: black;
-                opacity: 70%;
+                opacity: 85%;
                 width: 30vh; /* 18vw */
                 height: 30vh;
                 border-radius: 200px;
