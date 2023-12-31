@@ -8,10 +8,10 @@
 
     <body>
         <div id="cover">
-            <p id="services">Valentine Jones-Metsiou,  Front-End Web Developer  &&  Illustrator</p>
+            <p id="services">Valentine Jones-Metsiou,  Illustrator and Front-End Web</p>
         </div>
 
-        <div style="height: 50vh; width: 100vw; position: relative; display: flex; margin: auto; padding-top: 80px;">
+        <div style="height: 100vh; width: 100vw; position: relative; display: flex; margin: auto;">
             <canvas id="background"></canvas>
             <div style="width: fit-content; margin: auto; align-self: center;">
                 <button id="programmer" class="bubbleButton">
@@ -57,11 +57,15 @@
             #cover {
                 position: fixed;
                 z-index: 1;
-                background-color: #FF4A4A;
+                background-color: black;
                 color: white;
                 width: 100vw;
                 height: 60px;
                 display: flex;
+                transition: background-color 200ms ease;
+            }
+            #cover:hover {
+                background-color: #FF4A4A;
             }
             #services {
                 align-self: center;
@@ -82,6 +86,7 @@
                 border-color: white;
                 border-style: solid;
                 border-width: 5px;
+                transition: background-color 100ms ease;
             }
             .bubbleButton:hover{
                 background-color: red;
