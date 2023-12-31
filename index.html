@@ -13,7 +13,7 @@
 
         <div style="height: 100vh; width: 100vw; position: relative; display: flex; margin: auto;">
             <canvas id="background"></canvas>
-            <div style="width: fit-content; margin: auto; align-self: center;">
+            <div id="buttonContainer" style="width: fit-content; margin: auto; display: flex; align-self: center; align-items: center;">
                 <button id="programmer" class="bubbleButton">
                     <img src="images/compButton.png" id="comp" class="buttonIcon">
                 </button>
@@ -103,10 +103,23 @@
                 width: 100%;
                 height: 100%;
             }
+            @media(max-width: 945px){
+                #title {
+                    margin-top: 5vh;
+                    margin-bottom: 5vh;
+                }
+                #buttonContainer {
+                    width: 100vw;
+                    display: flex; 
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                }
+            }
         </style>
         <!-- <link rel="stylesheet" href="styles.css"> -->
         <script src="elements.js"></script>
         <script src="main.js"></script>
     </body>
 
-</html>
+</html>images/penButton.png
