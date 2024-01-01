@@ -6,7 +6,7 @@ function animate() {
     }
     requestAnimationFrame(animate);
 }
-animate();
+document.addEventListener('load', animate());
 
 
 //Messy background code below * * * * * * * * * * * * * * * * * |
