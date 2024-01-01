@@ -53,6 +53,7 @@
             }
             body {
                 background-color: rgb(50,50,50);
+                overflow: hidden; /* no more scrolling when items are too large */
             }
             #cover {
                 position: fixed;
@@ -98,8 +99,8 @@
             #title {
                 aspect-ratio: 1 / 1;
                 width: 40vmin; /* 23vw */
-                margin-left: 5vw;
-                margin-right: 5vw;
+                margin-left: 5vmin;
+                margin-right: 5vmin;
             }
             .buttonIcon {
                 width: 100%;
@@ -107,8 +108,7 @@
             }
             @media(orientation: portrait){
                 #title {
-                    margin-top: 5vmin;
-                    margin-bottom: 5vmin;
+                    margin: 5vmin;
                 }
                 #buttonContainer {
                     width: 100vw;
