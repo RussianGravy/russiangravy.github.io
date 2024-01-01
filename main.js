@@ -59,7 +59,7 @@ function updateBackground(){
     drawBackground(-cur_y+(canvas.height-bg.height));
     drawForeground(cur_y);
     cur_y -= speed;
-    if(Math.abs(cur_y) >= canvas.height){
+    if(Math.abs(cur_y) >= fg.height){
         cur_y = 0;
     }
 }
