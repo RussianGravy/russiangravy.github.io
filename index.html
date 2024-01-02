@@ -7,21 +7,28 @@
     </head>
 
     <body>
-        <div id="cover">
-            <p id="services">Valentine Jones-Metsiou,  Illustrator and Front-End Web</p>
-        </div>
-
+        <nav id="navbar">
+            <p id="name">Valentine Jones</p>
+            <ul>
+                <li><a>Contact</a></li>
+                <li><a>Web-Dev Projects</a></li>
+                <li><a>Illustrations</a></li>
+            </ul>
+        </nav>
         <div style="height: 100vh; width: 100vw; position: relative; display: flex; margin: auto;">
             <canvas id="background"></canvas>
             <div id="buttonContainer" style="width: fit-content; margin: auto; display: flex; align-self: center; align-items: center;">
                 <button id="programmer" class="bubbleButton">
                     <img src="images/compButton.png" id="comp" class="buttonIcon">
+                    <p class="hidden_text">See My Projects</p>
                 </button>
                 <button id="title" class="bubbleButton">
                     <img src="images/logo.png" id="logo" class="buttonIcon">
+                    <p class="hidden_text">Learn About Me</p>
                 </button>
                 <button id="illustrator" class="bubbleButton">
                     <img src="images/penButton.png" id="pen" class="buttonIcon">
+                    <p class="hidden_text">See My Work</p>
                 </button>
             </div>
         </div>
@@ -55,22 +62,34 @@
                 background-color: rgb(50,50,50);
                 overflow: hidden; /* no more scrolling when items are too large */
             }
-            #cover {
-                position: fixed;
-                z-index: 1;
+            #navbar {
                 background-color: black;
-                color: white;
-                width: 100vw;
-                height: 60px;
                 display: flex;
-                transition: background-color 200ms ease;
             }
-            #cover:hover {
-                background-color: #FF4A4A;
-            }
-            #services {
+            #name {
+                color: white;
+                flex-grow: 1; /* Fills remaining space */
+                padding-left: 20px;
                 align-self: center;
-                margin-left: 15px;
+            }
+            #navbar ul {
+                list-style: none;
+                padding: 0; 
+                margin: 0;
+                text-align: center;
+                overflow: hidden;
+            }
+            #navbar a {
+                color: white;
+                text-decoration: none;
+                display: block;
+                padding: 20px;
+            }
+            #navbar a:hover {
+                background-color: #FF4A4A;;
+            }
+            #navbar li{
+                float: right;
             }
             #background {
                 width: 100%;
@@ -105,6 +124,13 @@
             .buttonIcon {
                 width: 100%;
                 height: 100%;
+            }
+            .hidden_text {
+                visibility: hidden;
+                color: black;
+                position: absolute;
+                font-size: 5vmin;
+                margin: 0;
             }
             @media(orientation: portrait){
                 #title {
