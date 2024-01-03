@@ -1,29 +1,87 @@
 <!DOCTYPE html>
-    <head></head>
-    <body> 
-        <div>
-            <p>I am Valentine Jones. lakjhsdklfjh alskjdhf klasjhdf lkajshd flkjas <br> hello </p> 
-        </div> 
+<html>
+
+    <head>
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+        <meta name="author" content="Valentine Jones-Metsiou">
+    </head>
+
+    <body>
+        <nav id="navbar">
+            <img src="../images/logo.png" style="aspect-ratio: 1/1; width: 8vmin; padding: 0px 1vmin 0px 2vmin;">
+            <p id="name">Valentine Jones</p>
+            <ul>
+                <li><a href="../otherpages/contact.html">Contact</a></li>
+                <li><a href="../otherpages/frontend.html">Web-Dev Projects</a></li>
+                <li><a href="../otherpages/drawings.html">Illustrations</a></li>
+            </ul>
+        </nav>
+        <div style="height: 100vh; width: 100vw; position: relative; display: flex;">
+            <canvas id="background"></canvas>
+        </div>
+
+    <!-- STYLING BELOW. WHY DIDN'T I USE A DEDICATED SHEET? I DON'T KNOW BUT I DID ALL RIGHT WITHOUT ONE. -->
+
         <style>
-            body {background-color: red;}
-            div {
-                margin-right: 50px;
-                margin-left: 50px;
-                height: auto;
-                width: auto;
-                background-color: white;
-                border-color: lightcoral;
-                border-style: solid;
-                border-width: 10px;
-                border-radius: 50px;
+            * {
+                padding: 0;
+                margin: 0;
             }
-            p {
-                margin-left: 30%;
-                margin-right: 30%;
-                font-size: x-large;
-                width: auto;
-                text-align: left;
+            body {
+                background-color: rgb(50,50,50);
+                overflow: hidden; /* no more scrolling when items are too large */
+            }
+            #navbar {
+                position: absolute;
+                width: 100vw;
+                z-index: 20;
+                background-color: black;
+                display: flex;
+            }
+            #name {
+                color: white;
+                font-size: 2vw;
+                flex-grow: 1; /* Fills remaining space */
+                align-self: center;
+            }
+            #navbar ul {
+                list-style: none;
+                padding: 0; 
+                margin: 0;
+                text-align: center;
+                overflow: hidden;
+            }
+            #navbar a {
+                color: white;
+                text-decoration: none;
+                display: block;
+                height: 100%;
+                font-size: 2vw;
+                padding: 1vw;
+            }
+            #navbar a:hover {
+                background-color: #FF4A4A;;
+                cursor: pointer;
+            }
+            #navbar li{
+                float: right;
+            }
+            #background {
+                width: 100%;
+                height: 100%;
+                position: absolute; /* used to be position: absolute */
+                z-index: -1;
+            }
+            @media(orientation: portrait){
+                #name {
+                    font-size: 3.5vw;
+                }   
+                #navbar a {
+                    font-size: 3.5vw;
+                    padding: 2vw;
+                }
             }
         </style>
     </body>
+
 </html>
