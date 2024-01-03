@@ -21,7 +21,7 @@
             <div id="buttonContainer" style="width: fit-content; margin: auto; display: flex; align-self: center; align-items: center;">
                 <button id="programmer" class="bubbleButton">
                     <img src="images/compButton.png" id="comp" class="buttonIcon">
-                    <p class="hidden_text">See My Projects</p>
+                    <p class="hidden_text">Experience My Projects</p>
                 </button>
                 <button id="title" class="bubbleButton">
                     <img src="images/profile.png" id="logo" class="buttonIcon">
@@ -114,13 +114,24 @@
                 border-width: 5px;
                 transition: background-color 100ms ease;
                 overflow: hidden;
+                position: relative;
             }
             .bubbleButton:hover{
-                background-color: red;
                 transform: scale(1.05);
                 opacity: 100%;
                 cursor: pointer;
                 cursor: pointer;
+            }
+            .buttonIcon {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                transition: opacity 275ms ease;
+            }
+            .buttonIcon:hover{
+                opacity: 0;
             }
             #title {
                 opacity: 1;
@@ -129,11 +140,13 @@
                 margin-left: 5vmin;
                 margin-right: 5vmin;
             }
-            .buttonIcon {
-                width: 100%;
-                height: 100%;
-            }
             .hidden_text {
+                color: white;
+                font-size: 3.5vmin;
+                font-family: ;
+                margin: auto;
+                align-self: center;
+                z-index: 100;
             }  
             @media(orientation: portrait){
                 #name {
@@ -147,7 +160,7 @@
                     margin: 5vmin;
                 }
                 .bubbleButton {
-                    
+                    color: white;
                 }    
                 #buttonContainer {
                     width: 100vw;
