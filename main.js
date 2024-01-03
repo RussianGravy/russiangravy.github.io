@@ -1,7 +1,7 @@
 var gameFrame = 0;
 function animate() {
     gameFrame++;
-    if(gameFrame%2 == 0){
+    if(gameFrame%1.5 == 0){
         updateBackground();
     }
     requestAnimationFrame(animate);
@@ -52,7 +52,7 @@ window.onresize = () => {
     fg.height = fg.width/aspectratio;
 }
 
-const speed = 0.6;
+const speed = 2;
 var cur_y = 0
 function updateBackground(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);

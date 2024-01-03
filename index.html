@@ -8,6 +8,7 @@
 
     <body>
         <nav id="navbar">
+            <img src="images/logo.png" style="width: 8vmin;">
             <p id="name">Valentine Jones</p>
             <ul>
                 <li><a>Contact</a></li>
@@ -23,7 +24,7 @@
                     <p class="hidden_text">See My Projects</p>
                 </button>
                 <button id="title" class="bubbleButton">
-                    <img src="images/logo.png" id="logo" class="buttonIcon">
+                    <img src="images/profile.png" id="logo" class="buttonIcon">
                     <p class="hidden_text">Learn About Me</p>
                 </button>
                 <button id="illustrator" class="bubbleButton">
@@ -70,7 +71,6 @@
                 color: white;
                 font-size: 2vw;
                 flex-grow: 1; /* Fills remaining space */
-                padding-left: 20px;
                 align-self: center;
             }
             #navbar ul {
@@ -84,6 +84,7 @@
                 color: white;
                 text-decoration: none;
                 display: block;
+                height: 100%;
                 font-size: 2vw;
                 padding: 1vw;
             }
@@ -104,11 +105,12 @@
                 opacity: 85%;
                 aspect-ratio: 1 / 1;
                 width: 30vmin; /* 18vw */
-                border-radius: 200px;
+                border-radius: 30vmin;
                 border-color: white;
                 border-style: solid;
                 border-width: 5px;
                 transition: background-color 100ms ease;
+                overflow: hidden;
             }
             .bubbleButton:hover{
                 background-color: red;
@@ -118,6 +120,7 @@
                 cursor: pointer;
             }
             #title {
+                opacity: 1;
                 aspect-ratio: 1 / 1;
                 width: 40vmin; /* 23vw */
                 margin-left: 5vmin;
@@ -145,6 +148,8 @@
                 #title {
                     margin: 5vmin;
                 }
+                .bubbleButton {
+                }    
                 #buttonContainer {
                     width: 100vw;
                     display: flex; 
