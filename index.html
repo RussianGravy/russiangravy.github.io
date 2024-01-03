@@ -16,7 +16,7 @@
                 <li><a>Illustrations</a></li>
             </ul>
         </nav>
-        <div style="height: 100vh; width: 100vw; position: relative; display: flex; margin: auto;">
+        <div style="height: 100vh; width: 100vw; position: relative; display: flex;">
             <canvas id="background"></canvas>
             <div id="buttonContainer" style="width: fit-content; margin: auto; display: flex; align-self: center; align-items: center;">
                 <button id="programmer" class="bubbleButton">
@@ -64,6 +64,9 @@
                 overflow: hidden; /* no more scrolling when items are too large */
             }
             #navbar {
+                position: absolute;
+                width: 100vw;
+                z-index: 20;
                 background-color: black;
                 display: flex;
             }
