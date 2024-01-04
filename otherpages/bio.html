@@ -15,10 +15,12 @@
                 <li><a href="../otherpages/frontend.html">Web-Dev Projects</a></li>
                 <li><a href="../otherpages/drawings.html">Illustrations</a></li>
             </ul>
-        </nav>
+        </nav> <!-- End of Nav -->
         <div style="height: 100vh; width: 100vw; position: relative; display: flex;">
-            <canvas id="background"></canvas>
-        </div>
+            <div>
+                <a id="home_button" href="../index.html">Go Home</a>
+            </div>
+        </div> 
 
     <!-- STYLING BELOW. WHY DIDN'T I USE A DEDICATED SHEET? I DON'T KNOW BUT I DID ALL RIGHT WITHOUT ONE. -->
 
@@ -28,7 +30,7 @@
                 margin: 0;
             }
             body {
-                background-color: rgb(50,50,50);
+                background-color: pink;
                 overflow: hidden; /* no more scrolling when items are too large */
             }
             #navbar {
@@ -66,11 +68,7 @@
             #navbar li{
                 float: right;
             }
-            #background {
-                width: 100%;
-                height: 100%;
-                position: absolute; /* used to be position: absolute */
-                z-index: -1;
+            #home_button {
             }
             @media(orientation: portrait){
                 #name {
