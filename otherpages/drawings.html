@@ -8,17 +8,19 @@
 
     <body>
         <nav id="navbar">
-            <img src="../images/logo.png" style="aspect-ratio: 1/1; width: 8vmin; padding: 0px 1vmin 0px 2vmin;">
+            <img id="logo" src="../images/logo.png">
             <p id="name">Valentine Jones</p>
             <ul>
                 <li><a href="../otherpages/contact.html">Contact</a></li>
                 <li><a href="../otherpages/frontend.html">Web-Dev Projects</a></li>
                 <li><a href="../otherpages/drawings.html">Illustrations</a></li>
             </ul>
-        </nav>
+        </nav> <!-- End of Nav -->
         <div style="height: 100vh; width: 100vw; position: relative; display: flex;">
-            <canvas id="background"></canvas>
-        </div>
+            <div>
+                <a id="home_button" href="../index.html">Go Home</a>
+            </div>
+        </div> 
 
     <!-- STYLING BELOW. WHY DIDN'T I USE A DEDICATED SHEET? I DON'T KNOW BUT I DID ALL RIGHT WITHOUT ONE. -->
 
@@ -38,9 +40,15 @@
                 background-color: black;
                 display: flex;
             }
+            #logo {
+                height: 4vw; 
+                width: 4vw; 
+                padding: 0px 1vmin 0px 2vmin;
+            }
             #name {
                 color: white;
                 font-size: 2vw;
+                font-family: Arial, Helvetica, sans-serif;
                 flex-grow: 1; /* Fills remaining space */
                 align-self: center;
             }
@@ -66,15 +74,15 @@
             #navbar li{
                 float: right;
             }
-            #background {
-                width: 100%;
-                height: 100%;
-                position: absolute; /* used to be position: absolute */
-                z-index: -1;
+            #home_button {
             }
             @media(orientation: portrait){
+                #logo {
+                    width: 8vw;
+                    height: 8vw;
+                }
                 #name {
-                    font-size: 3.5vw;
+                    font-size: 3vw;
                 }   
                 #navbar a {
                     font-size: 3.5vw;
