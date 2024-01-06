@@ -8,13 +8,18 @@
 
     <body>
         <nav id="navbar">
-            <img id="logo" src="../images/logo.png">
+            <img id="logo" src="../images/logo.png" onclick="goNext('../index.html')">
             <p id="name">Valentine Jones</p>
             <ul>
                 <li><a href="../otherpages/contact.html">Contact</a></li>
                 <li><a href="../otherpages/frontend.html">Web-Dev Projects</a></li>
                 <li><a href="../otherpages/drawings.html">Illustrations</a></li>
             </ul>
+            <script>
+                function goNext(url){
+                    window.open(url, "_self");
+                } //shoud've made these links
+            </script>
         </nav> <!-- End of Nav -->
         <div style="height: 100vh; width: 100vw; position: relative; display: flex;">
             <div>
@@ -44,6 +49,7 @@
                 height: 4vw; 
                 width: 4vw; 
                 padding: 0px 1vmin 0px 2vmin;
+                cursor: pointer;
             }
             #name {
                 color: white;
