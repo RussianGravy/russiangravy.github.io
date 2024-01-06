@@ -21,9 +21,21 @@
                 } //shoud've made these links
             </script>
         </nav> <!-- End of Nav -->
-        <div style="height: 100vh; width: 100vw; position: relative; display: flex;">
-            <div>
-                <a id="home_button" href="../index.html">Go Home</a>
+        <div id = "illustrations_container">
+            <div class="ill">
+                <img src="../images/illustrations/gator_logo.png">
+            </div>
+            <div class="ill">
+                <img src="../images/illustrations/Gator_mascot.png">
+            </div>
+            <div class="ill">
+                <img src="../images/illustrations/Gorillas.png">
+            </div>
+            <div class="ill">
+                <img src="../images/illustrations/greek thing.png">
+            </div>
+            <div class="ill">
+                <img src="../images/illustrations/spideys.png">
             </div>
         </div> 
 
@@ -36,10 +48,9 @@
             }
             body {
                 background-color: pink;
-                overflow: hidden; /* no more scrolling when items are too large */
             }
             #navbar {
-                position: absolute;
+                position: fixed;
                 width: 100vw;
                 z-index: 20;
                 background-color: black;
@@ -80,7 +91,24 @@
             #navbar li{
                 float: right;
             }
-            #home_button {
+            #illustrations_container {
+                height: fit-content; 
+                width: 90vw; 
+                position: relative; 
+                display: flex; 
+                flex-wrap: wrap;
+                padding: 5vw 3vw 0 3vw;
+            }
+            .ill {
+                background-color: violet;
+                padding: 1vw;
+                margin: 0.5vw;
+                width: 25vw;
+                height: 25vw;
+            }
+            .ill img {
+                width: 100%;
+                height: 100%;
             }
             @media(orientation: portrait){
                 #logo {
@@ -93,6 +121,9 @@
                 #navbar a {
                     font-size: 3.5vw;
                     padding: 2vw;
+                }
+                #illustrations_container {
+                    padding: 9vw;
                 }
             }
         </style>

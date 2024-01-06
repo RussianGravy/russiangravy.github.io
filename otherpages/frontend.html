@@ -22,8 +22,15 @@
             </script>
         </nav> <!-- End of Nav -->
         <div style="height: 100vh; width: 100vw; position: relative; display: flex;">
-            <div>
-                <a id="home_button" href="../index.html">Go Home</a>
+            <div id="project_list">
+                <h1 style="margin-bottom: 1vh;">Web-Dev Projects</h1>
+                <div id="SF_Maps" class="project">
+                    <div style="width: 100%; display: flex; align-items: center;">
+                        <img src="../images/illustrations/gator_logo.png">
+                        <h2>SF_Maps</h2>
+                    </div>
+                    <a href="https://sfsu-maps.vercel.app/">sfsu-maps.vercel.app</a>
+                </div>
             </div>
         </div> 
 
@@ -36,10 +43,9 @@
             }
             body {
                 background-color: pink;
-                overflow: hidden; /* no more scrolling when items are too large */
             }
             #navbar {
-                position: absolute;
+                position: fixed;
                 width: 100vw;
                 z-index: 20;
                 background-color: black;
@@ -80,7 +86,26 @@
             #navbar li{
                 float: right;
             }
-            #home_button {
+            #project_list {
+                margin: 5vw auto 5vw auto;
+                display: flex;
+                flex-direction: column;
+            }
+            .project {
+                padding: 1vw; 
+                width: 60vw;
+            }
+            .project a {
+                text-decoration: none;
+                color: lightblue;
+            }
+            #SF_Maps {
+                background-color: rgb(161, 13, 161);
+                color: yellow;
+            }
+            #SF_Maps img {
+                width: 60px;
+                height: 60px;
             }
             @media(orientation: portrait){
                 #logo {
@@ -93,6 +118,9 @@
                 #navbar a {
                     font-size: 3.5vw;
                     padding: 2vw;
+                }
+                #project_list {
+                    margin-top: 9vw;
                 }
             }
         </style>
