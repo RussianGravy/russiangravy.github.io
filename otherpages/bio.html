@@ -16,9 +16,21 @@
                 <li><a href="../otherpages/drawings.html">Illustrations</a></li>
             </ul>
         </nav> <!-- End of Nav -->
-        <div style="height: 100vh; width: 100vw; position: relative; display: flex;">
-            <div>
-                
+        <div style="height: 100vh; width: 100vw; position: relative; display: flex; flex-direction: column;">
+            <div id="cover">
+                <img id="profile_pic" src="../images/bio_pic.png"> 
+                <h id="title">Valentine Michael Jones-Metsiou</h1>
+                <a href="drawings.html">Illustrations</a>
+                <a href="frontend.html">Past Projects</a>
+                <a href="contact.html">Contact</a>
+            </div>
+
+            <div id="content">
+                <p>Hi! My name is Valentine; I am a computer science major at San Francisco State University. 
+                    My career goals a bit undecided but I'm very invested in illustration and front-end web developement.
+                    I'm eager to get my feat wet working in either field; which means I would love to take on any project 
+                    you can dream up!
+                </p> 
             </div>
         </div> 
 
@@ -30,7 +42,7 @@
                 margin: 0;
             }
             body {
-                background-color: pink;
+                background-color: rgb(187, 64, 64);
             }
             #navbar {
                 position: fixed;
@@ -38,6 +50,7 @@
                 z-index: 20;
                 background-color: black;
                 display: flex;
+                /* visibility: hidden; */
             }
             #logo {
                 height: 4vw; 
@@ -72,6 +85,41 @@
             }
             #navbar li{
                 float: right;
+            }
+            #cover {
+                width: 81vw;
+                margin-top: 9vw;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 5vw;
+                display: flex;
+                align-items: center;
+                background-color: rgb(255, 203, 198);
+                border-top-left-radius: 5vw;
+                border-top-right-radius: 5vw;
+            }
+            #profile_pic {
+                height: 25vw;
+                width: 25vw;
+                filter: brightness(1.5);
+                border: 0.5vw solid black;
+                border-radius: 20vw;
+            }
+            #title {
+                color: black;
+                font-size: 4vw;
+                align-self: center;
+                margin-left: 1vw;
+            }
+            #content {
+                width: 81vw;
+                margin-top: 2vh;
+                margin-left: auto;
+                margin-right: auto;
+                padding: 5vw;
+                display: flex;
+                align-items: center;
+                background-color: rgb(255, 203, 198);
             }
             @media(orientation: portrait){
                 #logo {
