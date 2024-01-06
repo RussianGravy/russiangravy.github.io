@@ -21,23 +21,36 @@
                 } //shoud've made these links
             </script>
         </nav> <!-- End of Nav -->
+
         <div style="height: 100vh; width: 100vw; position: relative; display: flex; flex-direction: column;">
             <div id="cover">
-                <img id="profile_pic" src="../images/bio_pic.png"> 
-                <h id="title">Valentine Michael Jones-Metsiou</h1>
-                <a href="drawings.html">Illustrations</a>
-                <a href="frontend.html">Past Projects</a>
-                <a href="contact.html">Contact</a>
-            </div>
+                <img src="../images/bio_pic.png">
+                <div> 
+                    <h1>Valentine Jones-Metsiou</h1>
+                    <p>Computer Science Major at San Francisco State University</p>
+                </div>
+            </div> <!--End of Cover-->
 
-            <div id="content">
-                <p>Hi! My name is Valentine; I am a computer science major at San Francisco State University. 
-                    My career goals a bit undecided but I'm very invested in illustration and front-end web developement.
-                    I'm eager to get my feat wet working in either field; which means I would love to take on any project 
-                    you can dream up!
+            <div id="content" style="flex-direction: column;">
+                <p>
+                    I am a part-time instructor at Learn2Code, and a practicing front-end web developer and illustrator. <br> <br>
+
+                    I enjoy making dynamic web pages that entertain users and deliver information effectively. 
+                    I've been practicing front-end web development since 2022 and this website is my most ambitious
+                    project so far. <br> <br>
+                    
+                    I also designed the user interface for a navigation app me and my friends made 
+                    called: SF Maps. This is an ongoing project that aims to make navigating the SF State campus easier 
+                    for new students by implementing features like one that builds automatic routes based on a student's class
+                    schedule and the time of day.
                 </p> 
-            </div>
-        </div> 
+                <div id="links" style="margin: 1.5vh">
+                    <a href="frontend.html">Past Projects</a>
+                    <a href="drawings.html">Illustrations</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div> <!--End of Content-->
+        </div> <!--End of Page-->
 
     <!-- STYLING BELOW. WHY DIDN'T I USE A DEDICATED SHEET? I DON'T KNOW BUT I DID ALL RIGHT WITHOUT ONE. -->
 
@@ -94,7 +107,7 @@
             }
             #cover {
                 width: 81vw;
-                margin-top: 9vw;
+                margin-top: 5vw;
                 margin-left: auto;
                 margin-right: auto;
                 padding: 5vw;
@@ -103,19 +116,38 @@
                 background-color: rgb(255, 203, 198);
                 border-top-left-radius: 5vw;
                 border-top-right-radius: 5vw;
+                box-shadow: 0.75vw 0.5vw darkred;
             }
-            #profile_pic {
+            #cover img {
                 height: 25vw;
                 width: 25vw;
                 filter: brightness(1.5);
                 border: 0.5vw solid black;
                 border-radius: 20vw;
             }
-            #title {
+            #cover h1 {
                 color: black;
                 font-size: 4vw;
                 align-self: center;
                 margin-left: 1vw;
+            }
+            #cover p {
+                margin-left: 3.5vw;
+                font-size: 1.75vw;
+            }
+            #links a {
+                color: darkblue;
+                background-color: lightblue;
+                border: 0.15vw solid darkblue;
+                text-decoration: none;
+                font-size: 1.5vw;
+                padding: 1vw;
+                margin: 0.5vw;
+                border-radius: 2vw;
+                transition: padding 75ms ease;
+            }
+            #links a:hover {
+                padding: 1.2vw;
             }
             #content {
                 width: 81vw;
@@ -124,10 +156,16 @@
                 margin-right: auto;
                 padding: 5vw;
                 display: flex;
-                align-items: center;
                 background-color: rgb(255, 203, 198);
             }
+            #content p {
+                margin-bottom: 4vh;
+                font-size: 2.25vw;
+            }
             @media(orientation: portrait){
+                #cover {
+                    margin-top: 9vw;
+                }
                 #logo {
                     width: 8vw;
                     height: 8vw;
