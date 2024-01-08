@@ -18,7 +18,7 @@
         </nav>
         <div style="height: 100vh; width: 100vw; position: relative; display: flex;">
             <canvas id="background"></canvas>
-            <div id="buttonContainer" style="width: fit-content; margin: auto; display: flex; align-self: center; align-items: center;">
+            <div id="buttonContainer">
                 <button id="programmer" class="bubbleButton" onclick="goNext('otherpages/frontend.html')">
                     <img src="images/compButton.png" id="comp" class="buttonIcon">
                     <p class="hidden_text">Test My Projects</p>
@@ -97,6 +97,13 @@
                 position: absolute; /* used to be position: absolute */
                 z-index: -1;
             }
+            #buttonContainer {
+                width: fit-content; 
+                height: fit-content; 
+                margin: auto; 
+                display: flex; 
+                align-items: center;
+            }
             .bubbleButton {
                 background-color: black;
                 opacity: 85%;
@@ -159,13 +166,13 @@
                     margin: 5vmin;
                 }
                 .bubbleButton {
-                    width: 20vh;
+                    width: 22vh;
                     border-radius: 26vh;
                 }    
                 #buttonContainer {
-                    width: 100vw;
                     display: flex; 
                     flex-direction: column;
+                    margin: 15vw auto 0 auto;
                 }
             }
         </style>
