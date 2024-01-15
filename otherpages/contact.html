@@ -22,9 +22,15 @@
             </script>
         </nav> <!-- End of Nav -->
         <div style="height: 100vh; width: 100vw; position: relative; display: flex;">
-            <div>
-                <h1 style="padding: 30px; font-size: 3vw;">Email: valentine.artstuff@gmail.com</h1>
-                <h1 style="padding: 30px; font-size: 3vw;">Phone: (111)-234-5678<h1>
+            <div id="contacts">
+                <a style="display: flex; flex-direction: row; align-items: center; padding: 30px;">
+                    <img src="../images/misc. icons/email_icon.png">
+                    <h1>valentine.artstuff@gmail.com</h1>
+                </a>
+                <a style="display: flex; flex-direction: row; align-items: center; padding: 30px;" href="https://www.instagram.com/russiangravy/">
+                    <img src="../images/misc. icons/insta_icon.png">
+                    <h1> @russiangravy</h1>
+                </a>
             </div>
         </div> 
 
@@ -81,6 +87,14 @@
             #navbar li{
                 float: right;
             }
+            h1 {
+                margin-left: 1vw; 
+                font-size: 3vw;
+            }
+            #contacts img {
+                width: 4vw; 
+                height: 4vw;
+            }
             @media(orientation: portrait){
                 #logo {
                     width: 8vw;
@@ -92,6 +106,13 @@
                 #navbar a {
                     font-size: 3.5vw;
                     padding: 2vw;
+                }
+                h1 {
+                    font-size: 5vw;
+                }
+                #contacts img {
+                    width: 6vw; 
+                    height: 6vw;
                 }
             }
         </style>
