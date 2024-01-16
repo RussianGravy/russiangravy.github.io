@@ -37,6 +37,12 @@
             <div class="ill">
                 <img src="../images/illustrations/spideys.png">
             </div>
+            <div class="ill">
+                <img src="../images/logo.png">
+            </div>
+            <div class="ill">
+                <img src="../images/penButton copy.png">
+            </div>
         </div> 
 
     <!-- STYLING BELOW. WHY DIDN'T I USE A DEDICATED SHEET? I DON'T KNOW BUT I DID ALL RIGHT WITHOUT ONE. -->
@@ -92,12 +98,11 @@
                 float: right;
             }
             #illustrations_container {
-                height: fit-content; 
-                width: 85vw; 
-                position: relative; 
+                /* background-color: rgb(50,50,50); */
                 display: flex; 
-                flex-wrap: wrap;
-                margin: auto;
+                overflow-x: auto;
+                width: 60vw;
+                margin: 0 auto 0 auto;
                 padding-top: 5vw;
             }
             .ill {
@@ -108,8 +113,8 @@
                 height: 200px;
             }
             .ill img {
-                width: 100%;
-                height: 100%;
+                width: 200px;
+                height: 200px;
             }
             @media(orientation: portrait){
                 #logo {
