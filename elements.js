@@ -40,7 +40,7 @@ window.onresize = () => {
     fg.height = fg.width/aspectratio;
 }
 
-const speed = 0.8;
+const speed = 0.4;
 var cur_y = 0
 function updateBackground(){
     ctx.clearRect(0, 0, canvas.width, canvas.height);
