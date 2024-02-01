@@ -21,6 +21,12 @@
                 } //shoud've made these links
             </script>
         </nav> <!-- End of Nav -->
+        <div id="banner">
+            <canvas id="background"></canvas>
+            <h1>ILLUSTRATIONS BELOW</h1>
+        </div>
+       
+        
         <div id = "illustrations_container">
             <div class="ill">
                 <img src="../images/logo.png">
@@ -54,6 +60,31 @@
             }
             body {
                 background-color: pink;
+            }
+            #banner {
+                position: relative;
+                margin: 0 10vw 0 10vw;
+                padding-top: 5vw;
+                width: 80vw;
+                height: 20vw;
+            }
+            #banner h1{
+                position: absolute;
+                width: 100%;
+                text-align: center;
+                text-decoration:overline underline;
+                color: black;
+                font-size: 6.25vw;
+                top: 50%;
+                left: 0.5%;
+            }
+            #background {
+                background-color: orange;
+                width: 100%;
+                height: 100%;
+                opacity: 0.9;
+                filter: grayscale(50%);
+                border: 0.5vw solid black;
             }
             #navbar {
                 position: fixed;
@@ -117,6 +148,9 @@
                 height: 300px;
             }
             @media(orientation: portrait){
+                #banner {
+                    padding-top: 9vw;
+                }
                 #logo {
                     width: 8vw;
                     height: 8vw;
@@ -133,6 +167,8 @@
                 }
             }
         </style>
+        <script src="_modified_elements.js"></script>
+        <script src="../main.js"></script>
     </body>
 
 </html>
