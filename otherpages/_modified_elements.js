@@ -43,7 +43,7 @@ window.onresize = () => {
     // fg.width = window.innerWidth;
     // fg.height = fg.width/aspectratio;
     canvas.width = window.innerWidth*0.80;
-    canvas.height = window.innerHeight*0.20;
+    canvas.height = window.innerWidth*0.20;
     ctx.width = canvas.width;
     ctx.height = canvas.height;
     bg.width = canvas.width;
