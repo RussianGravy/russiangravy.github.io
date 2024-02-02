@@ -49,6 +49,15 @@
             <div class="ill">
                 <img src="../images/illustrations/spideys.png">
             </div>
+            <div class="ill">
+                <img src="../images/illustrations/beerguy(old).png">
+            </div>
+            <div class="ill">
+                <img src="../images/illustrations/beerguy.png">
+            </div>
+            <div class="ill" style="overflow: hidden;">
+                <img style="width: 100%; height: auto;" src="../images/illustrations/eagles5.png">
+            </div>
         </div> 
 
     <!-- STYLING BELOW. WHY DIDN'T I USE A DEDICATED SHEET? I DON'T KNOW BUT I DID ALL RIGHT WITHOUT ONE. -->
@@ -63,7 +72,7 @@
             }
             #banner {
                 position: relative;
-                margin: 0 10vw 0 10vw;
+                margin: 0 auto 0 auto;
                 padding-top: 5vw;
                 width: 80vw;
                 height: 20vw;
@@ -81,6 +90,8 @@
             }
             #background {
                 background-color: orange;
+                margin: 0;
+                padding: 0;
                 width: 100%;
                 height: 100%;
                 opacity: 0.9;
@@ -140,11 +151,15 @@
             }
             .ill {
                 background-color: rgb(162, 162, 162);
+                position: relative;
                 padding: 0.5vw;
                 margin: 0.5vw;
                 width: 23vw;
                 height: 23vw; 
                 /* 23*3 + 1*6 = 69 + 6 */
+            }
+            .ill:hover {
+
             }
             .ill img {
                 width: 100%;
