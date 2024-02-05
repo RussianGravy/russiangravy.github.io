@@ -4,22 +4,25 @@ body {
     background-image: url("../images/blank_wall.webp");
 }
 
-#picture_track {
-    background: rgba(255, 255, 255, 0.65);
+.col {
     width: fit-content;
-    height: fit-content;
-    margin: auto;
-    align-self: center;
-    display: flex; 
-    flex-wrap: wrap;
-    /* overflow-x: auto; */
+    height: 100%;
+    margin: 0 auto 0 auto;
+}
+
+#left_colunn div{
+    margin-bottom: 200px;
+}
+
+#right_column div{
+    margin-top: 200px;
 }
 
 .illustration {
     width: 400px;
-    height: 400px;
+    aspect-ratio: 1/1;
     position: relative;
-    margin: 2vw;
+    margin: 1vw;
 }
 .frame {
     width: 100%;
@@ -30,6 +33,7 @@ body {
     margin: 5%;
     aspect-ratio: 1/1;
     width: 90%;
+    background-color: white;
 }
 .plaque {
     width: 25%;
@@ -47,7 +51,7 @@ body {
 }
 #banner {
     position: relative;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 80px auto;
     padding-top: 5vw;
     min-width: 80vw;
     height: 8vw;
