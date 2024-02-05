@@ -2,7 +2,7 @@ var aspectratio = 2560/1600;
 
 const canvas = document.getElementById("background");
     canvas.width = window.innerWidth*0.80;
-    canvas.height = window.innerWidth*0.20;
+    canvas.height = window.innerWidth*0.08;
     // canvas.width = window.innerWidth;
     // canvas.height = window.innerHeight;
 const ctx = canvas.getContext("2d");
@@ -43,7 +43,7 @@ window.onresize = () => {
     // fg.width = window.innerWidth;
     // fg.height = fg.width/aspectratio;
     canvas.width = window.innerWidth*0.80;
-    canvas.height = window.innerWidth*0.20;
+    canvas.height = window.innerWidth*0.08;
     ctx.width = canvas.width;
     ctx.height = canvas.height;
     bg.width = canvas.width;

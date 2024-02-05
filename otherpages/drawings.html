@@ -4,6 +4,7 @@
     <head>
         <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
         <meta name="author" content="Valentine Jones-Metsiou">
+        <link rel="stylesheet" href="style2.css">
     </head>
 
     <body>
@@ -25,166 +26,35 @@
             <canvas id="background"></canvas>
             <h1>ILLUSTRATIONS BELOW</h1>
         </div>
-       
-        
-        <div id = "illustrations_container">
-            <div class="ill">
-                <img src="../images/logo.png">
-            </div>
-            <div class="ill">
-                <img src="../images/penButton copy.png">
-            </div>
-            <div class="ill">
-                <img src="../images/illustrations/gator_logo.png">
-            </div>
-            <div class="ill">
-                <img src="../images/illustrations/Gator_mascot.png">
-            </div>
-            <div class="ill">
-                <img src="../images/illustrations/Gorillas.png">
-            </div>
-            <div class="ill">
-                <img src="../images/illustrations/greek thing.png">
-            </div>
-            <div class="ill">
-                <img src="../images/illustrations/spideys.png">
-            </div>
-            <div class="ill">
-                <img src="../images/illustrations/beerguy(old).png">
-            </div>
-            <div class="ill">
-                <img src="../images/illustrations/beerguy.png">
-            </div>
-            <div class="ill" style="overflow: hidden;">
-                <img style="width: 100%; height: auto;" src="../images/illustrations/eagles5.png">
-            </div>
-        </div> 
 
-    <!-- STYLING BELOW. WHY DIDN'T I USE A DEDICATED SHEET? I DON'T KNOW BUT I DID ALL RIGHT WITHOUT ONE. -->
+        <div id="picture_track">
+            <div class="illustration">
+                <img class="frame" src="../images/pic_frame.png">
+                <img class="art" src="../images/illustrations/gator_logo.png">
+                <p class="plaque">gator logo</p>
+            </div>
+            <div class="illustration">
+                <img class="frame" src="../images/pic_frame.png">
+                <img class="art" src="../images/illustrations/greek thing.png">
+                <p class="plaque">greece</p>
+            </div>
+            <div class="illustration">
+                <img class="frame" src="../images/pic_frame.png">
+                <img class="art" src="../images/illustrations/Gator_mascot.png">
+                <p class="plaque">gator</p>
+            </div>
+            <div class="illustration">
+                <img class="frame" src="../images/pic_frame.png">
+                <img class="art" src="../images/illustrations/Gorillas.png">
+                <p class="plaque">gorillaz</p>
+            </div>
+            <div class="illustration">
+                <img class="frame" src="../images/pic_frame.png">
+                <img class="art" src="../images/illustrations/beerguy.png">
+                <p class="plaque">beer guy</p>
+            </div>
+        </div>
 
-        <style>
-            * {
-                padding: 0;
-                margin: 0;
-            }
-            body {
-                background-color: grey;
-            }
-            #banner {
-                position: relative;
-                margin: 0 auto 0 auto;
-                padding-top: 5vw;
-                width: 80vw;
-                height: 20vw;
-            }
-            #banner h1{
-                position: absolute;
-                width: 100%;
-                text-align: center;
-                text-decoration:overline underline;
-                font-weight: bold;
-                color: black;
-                font-size: 6.25vw;
-                top: 50%;
-                left: 0.5%;
-            }
-            #background {
-                background-color: orange;
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                height: 100%;
-                opacity: 0.9;
-                filter: grayscale(50%);
-                border: 0.5vw solid black;
-            }
-            #navbar {
-                position: fixed;
-                width: 100vw;
-                z-index: 20;
-                background-color: black;
-                display: flex;
-            }
-            #logo {
-                height: 4vw; 
-                width: 4vw; 
-                padding: 0px 1vmin 0px 2vmin;
-                cursor: pointer;
-            }
-            #name {
-                color: white;
-                font-size: 2vw;
-                font-family: Arial, Helvetica, sans-serif;
-                flex-grow: 1; /* Fills remaining space */
-                align-self: center;
-            }
-            #navbar ul {
-                list-style: none;
-                padding: 0; 
-                margin: 0;
-                text-align: center;
-                overflow: hidden;
-            }
-            #navbar a {
-                color: white;
-                text-decoration: none;
-                display: block;
-                height: 100%;
-                font-size: 2vw;
-                padding: 1vw;
-            }
-            #navbar a:hover {
-                background-color: #FF4A4A;;
-                cursor: pointer;
-            }
-            #navbar li{
-                float: right;
-            }
-            #illustrations_container {
-                height: fit-content; 
-                width: 75vw; 
-                margin: auto;
-                display: flex; 
-                flex-wrap: wrap;
-                padding-top: 5vw;
-                /* background-color: rgb(255, 172, 252); */
-            }
-            .ill {
-                background-color: rgb(162, 162, 162);
-                position: relative;
-                padding: 0.5vw;
-                margin: 0.5vw;
-                width: 23vw;
-                height: 23vw; 
-                /* 23*3 + 1*6 = 69 + 6 */
-            }
-            .ill:hover {
-
-            }
-            .ill img {
-                width: 100%;
-                height: 100%;
-            }
-            @media(orientation: portrait){
-                #banner {
-                    padding-top: 9vw;
-                }
-                #logo {
-                    width: 8vw;
-                    height: 8vw;
-                }
-                #name {
-                    font-size: 3vw;
-                }   
-                #navbar a {
-                    font-size: 3.5vw;
-                    padding: 2vw;
-                }
-                #illustrations_container {
-                    padding: 9vw;
-                }
-            }
-        </style>
         <script src="_modified_elements.js"></script>
         <script src="_modified_main.js"></script>
     </body>
