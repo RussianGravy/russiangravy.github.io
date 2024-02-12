@@ -36,12 +36,14 @@ body {
     background-color: white;
 }
 .plaque {
-    width: 25%;
+    width: fit-content;
     height: 7.5%;
+    font-size: 2vw;
     margin: 5px auto 0 auto;
+    padding: 0 5px 0 5px;
     text-align: center;
     background-color: gold;
-    border: 2px solid rgb(175, 143, 14);
+    border: 0.65vw outset rgb(175, 143, 14);
     color: brown;
 }
 
