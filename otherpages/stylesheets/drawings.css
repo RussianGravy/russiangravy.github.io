@@ -1,7 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background-image: url("../../images/blank_wall.webp");
+    background-image: url("../../images/blank_wall2.jpeg");
 }
 
 .col {
@@ -19,7 +19,7 @@ body {
 }
 
 .illustration {
-    width: 40vw;
+    width: 36vw;
     aspect-ratio: 1/1;
     position: relative;
     margin: 1vw;
@@ -108,5 +108,8 @@ body {
     #navbar a {
         font-size: 3.5vw;
         padding: 2vw;
+    }
+    .illustration {
+        width: 44vw;
     }
 }

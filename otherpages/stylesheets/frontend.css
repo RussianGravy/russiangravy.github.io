@@ -47,19 +47,20 @@ body {
 #navbar li{
     float: right;
 }
-#project_list {
-    margin: 5vw auto 5vw auto;
-    display: flex;
-    flex-direction: column;
+#project_list{
+    min-width: 81vw;
 }
 .project {
-    padding: 1vw; 
-    width: 60vw;
-    border-radius: 40px;
+    width: 23vw;
+    height: 35vw;
+    margin: 1vw;
+    padding: 1vw;
+    border-radius: 3vw;
 }
-.project a {
-    text-decoration: none;
-    color: lightblue;
+.header {
+    width: 100%;
+    display: flex; 
+    align-items: center;
 }
 #SF_Maps {
     background-color: rgb(161, 13, 161);
