@@ -48,27 +48,45 @@ body {
     float: right;
 }
 #project_list{
-    min-width: 81vw;
+    width: 88vw;
+    padding-top: 6vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .project {
-    width: 23vw;
-    height: 35vw;
+    /* width: 23vw;
+    height: 35vw; */
+    width: 331px;
+    height: 504px;
     margin: 1vw;
     padding: 1vw;
-    border-radius: 3vw;
+    border-radius: 43px;
+    background-color: grey;
 }
 .header {
     width: 100%;
     display: flex; 
     align-items: center;
 }
+.header h2 {
+    color: lightgrey;
+}
+.header img {
+    width: 75px;
+    height: 75px;
+}
 #SF_Maps {
     background-color: rgb(161, 13, 161);
     color: yellow;
 }
+#SF_Maps h2 {
+    color: yellow;
+}
 #SF_Maps img {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
 }
 @media(orientation: portrait){
     #logo {
@@ -83,6 +101,6 @@ body {
         padding: 2vw;
     }
     #project_list {
-        margin-top: 9vw;
+        padding-top: 9vw;
     }
 }
